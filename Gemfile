@@ -15,6 +15,8 @@ gem 'turbolinks'
 #Jim added
 gem 'bootstrap_form'
 gem 'bcrypt-ruby'
+gem 'fabrication'
+gem 'faker'
 
 group :development do
   gem 'thin'
@@ -26,10 +28,6 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'rspec-rails'
-
-  #Jim Added
-  gem 'fabrication'
-  gem 'faker'
 end
 
 group :test do
