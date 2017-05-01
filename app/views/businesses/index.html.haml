@@ -1,0 +1,13 @@
+.container
+  .row
+    .col-sm-10.offset-sm-1
+      %h1 List of all businesses - ordered by rating
+      .business_list
+        %ul
+          - @businesses.each do |business|
+            %li
+              .card
+                .card-block
+                  %h1
+                    = link_to business.name, business, class: "card-title"
+                  %h3.card_subtitle #{business.average_rating.round(1)} / 5.0

@@ -1,0 +1,13 @@
+.container
+  .row.justify-content-center
+    .col-sm-10.justify-content-center
+      .card.formpretty
+        .card-block
+          %h1.card-title Add New Business
+          = bootstrap_form_for @business, html: { class: "form-horizontal formpretty"} do |f|
+            %fieldset
+              = f.text_field :name, label: "Business Name"
+              = f.text_field :address, label: "Business Address"
+            %fieldset.actions.control-group.col-sm-offset-2
+              .controls
+                %input(type="submit" value="Add Business" class="btn btn-primary")

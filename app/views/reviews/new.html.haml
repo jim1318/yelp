@@ -1,0 +1,14 @@
+.container
+  .row.justify-content-center
+    .col-sm-10.justify-content-center
+      .card.formpretty
+        .card-block
+          %h1.card-title Submit a new review
+          %h3.card-subtitle For #{ @business.name }
+          = bootstrap_form_for [@business, @review], html: { class: "form-horizontal formpretty"} do |f|
+            %fieldset
+              = f.select :rating, options_for_video_reviews
+              = f.text_area :review_text, label: "Review text details"
+            %fieldset.actions.control-group.col-sm-offset-2
+              .controls
+                %input(type="submit" value="Sign Up" class="btn btn-primary")

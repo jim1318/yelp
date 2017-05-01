@@ -1,0 +1,14 @@
+.container
+  .row.justify-content-center
+    .col-sm-10.justify-content-center
+      .card.formpretty
+        .card-block
+          %h1.card-title Register
+          = bootstrap_form_for @user, html: { class: "form-horizontal formpretty"} do |f|
+            %fieldset
+              = f.email_field :email, label: "Email Address"
+              = f.password_field :password, label: "Password"
+              = f.text_field :full_name, label: "Full Name"
+            %fieldset.actions.control-group.col-sm-offset-2
+              .controls
+                %input(type="submit" value="Sign Up" class="btn btn-primary")

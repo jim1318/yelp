@@ -1,0 +1,15 @@
+.container-fluid
+  .jumbotron
+    %h1.display-4= @user.full_name
+  %h2 List of reviews - most recent first
+  .business_list
+    %ul
+      - @user.reviews.each do |review|
+        %li
+          .card
+            .card-block
+              = link_to "#{review.business.name}",  business_path(review.business), class: "card-title"
+              %hr
+              %h3.card-subtitle #{review.rating.round(1)} / 5
+              %hr
+              %p= review.review_text
