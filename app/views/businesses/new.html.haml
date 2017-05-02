@@ -4,7 +4,7 @@
       .card.formpretty
         .card-block
           %h1.card-title Add New Business
-          = bootstrap_form_for @business, html: { class: "form-horizontal formpretty"} do |f|
+          = bootstrap_form_for @business, layout: :horizontal, html: { class: "formpretty"} do |f|
             %fieldset
               = f.text_field :name, label: "Business Name"
               = f.text_field :address, label: "Business Address"

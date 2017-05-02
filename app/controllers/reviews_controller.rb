@@ -16,8 +16,8 @@ class ReviewsController < ApplicationController
     if review.save
       redirect_to @business
     else
+      flash.now[:danger] = "Invaid review"
       render :new
-      flash[:danger] = "Invaid review"
     end
   end
 

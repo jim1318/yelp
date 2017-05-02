@@ -4,7 +4,7 @@
       .card.formpretty
         .card-block
           %h1.card-title Register
-          = bootstrap_form_for @user, html: { class: "form-horizontal formpretty"} do |f|
+          = bootstrap_form_for @user, layout: :horizontal, html: { class: "formpretty"} do |f|
             %fieldset
               = f.email_field :email, label: "Email Address"
               = f.password_field :password, label: "Password"

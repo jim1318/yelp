@@ -57,7 +57,7 @@ describe BusinessesController do
       end
 
       context "with valid inputs" do
-        it "redirects to the show busines page" do
+        it "re-renders the show page" do
           post :create, business: Fabricate.attributes_for(:business)
           expect(response).to render_template :show
         end
